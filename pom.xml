@@ -114,6 +114,8 @@
                                 <artifactSet>
                                     <includes>
                                         <include>net.tnemc:*</include>
+                                        <include>com.tcoded:*</include>
+                                        <include>com.tcoded.folialib:*</include>
                                         <include>com.ghostchu:quickshop*:*</include>
                                         <include>com.ghostchu.quickshop.compatibility:*:*</include>
                                         <include>com.ghostchu.quickshop.addon:*:*</include>
@@ -139,6 +141,10 @@
                                     <relocation>
                                         <pattern>net.tnemc</pattern>
                                         <shadedPattern>${qs.relocation}.tne</shadedPattern>
+                                    </relocation>
+                                    <relocation>
+                                        <pattern>com.tcoded.folialib</pattern>
+                                        <shadedPattern>com.ghostchu.quickshop.shade.com.tcoded</shadedPattern>
                                     </relocation>
                                     <relocation>
                                         <pattern>io.papermc.lib.</pattern>
@@ -208,7 +214,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.6.3</version>
+                    <version>3.8.0</version>
                     <configuration>
                         <encoding>UTF-8</encoding>
                         <excludePackageNames>com.ghostchu.quickshop.nonquickshopstuff.*</excludePackageNames>
@@ -356,7 +362,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.32</version>
+                <version>1.18.34</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -369,7 +375,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
-                <version>1.7.32</version>
+                <version>2.0.16</version>
                 <scope>runtime</scope>
             </dependency>
         </dependencies>
@@ -401,6 +407,7 @@
         <module>platform/quickshop-platform-spigot-v1_20_R3</module>
         <module>platform/quickshop-platform-spigot-v1_20_R4</module>
         <module>platform/quickshop-platform-spigot-v1_21_R1</module>
+        <module>platform/quickshop-platform-spigot-v1_21_R2</module>
         <module>platform/quickshop-platform-paper</module>
         <module>quickshop-bukkit</module>
         <module>compatibility/common</module>
