@@ -418,7 +418,7 @@
         <!--        <module>compatibility/nocheatplus</module>-->
         <module>compatibility/worldguard</module>
         <module>compatibility/worldedit</module>
-        <module>compatibility/openinv</module>
+               <!--  <module>compatibility/openinv</module> -->
         <module>compatibility/advancedregionmarket</module>
         <module>compatibility/bentobox</module>
         <module>compatibility/superiorskyblock</module>
