@@ -32,11 +32,11 @@ public class SubCommand_Limit implements CommandHandler<Player> {
       quickshop.text().of(sender, "command.wrong-args").send();
       return;
     }
-    if (shop.getOwner().getUniqueId() != sender.getUniqueId()) {
+    final Shop shop = getLookingShop(sender);
+        if (shop.getOwner().getUniqueId() != sender.getUniqueId()) {
             quickshop.text().of(sender, "not-managed-shop").send();
             return;
     }
-    final Shop shop = getLookingShop(sender);
     if(shop == null) {
       quickshop.text().of(sender, "not-looking-at-shop").send();
       return;
